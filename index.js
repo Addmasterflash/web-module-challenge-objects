@@ -108,7 +108,7 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 function addReview(array, name, rating, feedback){
-  return reviews.push({name: "Daniela",rating: 5, feedback: 'Beautiful atmosphere and wonderful vegan options!');
+  return reviews.push({name: "Daniela",rating: 5, feedback: 'Beautiful atmosphere and wonderful vegan options!'});
  }
 console.log("task5", reviews);
 
@@ -125,10 +125,10 @@ Use the getReviewByIndex function below to do the following:
 
 
  function getReviewByIndex(array, number) {
-   return "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}";
+   return  `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
  }
  console.log("task6", getReviewByIndex(reviews, 0));
-
+//ig this was the way to do it, yeesh. forgot all about these
 
   
 
@@ -144,13 +144,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(reviews) {
-  return "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}";
-   } 
-   console.log("task7", getLastReview(reviews));
-
-
-
+function getLastReview(array) {
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`;
+}
+console.log(getLastReview(reviews));
+//never in my life would i have gotten this omygod
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** 💪💪💪💪💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪💪💪💪💪 
@@ -214,16 +212,16 @@ Use the carMaker function below to do the following:
 // }
 
 
-// /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-// function foo(){
-//   console.log('its working');
-//   return 'bar';
-// }
-// module.exports = {
-//   foo,
-//   createMenuItem,
-//   burger,
-//   addReview,
-//   getReviewByIndex,
-//   getLastReview,
-// }
+ /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
+ function foo(){
+   console.log('its working');
+   return 'bar';
+ }
+ module.exports = {
+   foo,
+   createMenuItem,
+   burger,
+   addReview,
+   getReviewByIndex,
+   getLastReview,
+ }
